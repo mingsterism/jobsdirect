@@ -1,0 +1,70 @@
+extend type Mutation {
+  createUser(userID: ID): User
+  updateUser(input: UpdateUserInput): User
+}
+
+extend type Query {
+  getUser(userID: ID): User
+}
+
+input UpdateUserInput {
+  userID: ID
+  name: String
+  dateFounded: DateTime
+  age: Int
+  gender: GenderEnum
+  race: RaceEnum
+  experience: ExperienceEnum
+  profession: ProfessionEnum
+  expectedSalary: Int
+}
+
+type User {
+  name: String
+  email: String
+  age: Int
+  gender: GenderEnum
+  race: RaceEnum
+  experience: ExperienceEnum
+  profession: ProfessionEnum
+  expectedSalary: Int
+}
+
+enum GenderEnum {
+  MALE
+  FEMALE
+}
+
+enum ProfessionEnum {
+  FINANCE
+  CONSULTING
+  MEDICAL
+  FMCG
+  MARKETING
+  SUPPLY
+  CHAIN
+  ENGINEERING
+  OPERATIONS
+  TECH
+  WEB
+  DEVELOPMENT
+}
+
+enum RaceEnum {
+  CHINESE
+  INDIAN
+  MALAY
+  OTHERS
+}
+
+enum ExperienceEnum {
+  FRESH_GRADUATE
+  SENIOR
+  PRINCIPAL
+  MANAGEMENT
+  SENIOR_MANAGEMENT
+  DIRECTOR
+  SENIOR_DIRECTOR
+  VICE_PRESIDENT
+  CEO
+}

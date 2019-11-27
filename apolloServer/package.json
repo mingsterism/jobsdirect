@@ -1,0 +1,40 @@
+{
+  "name": "jobmatching",
+  "version": "1.0.0",
+  "description": "### What does it do Automatically matches individuals to the right job based on their profile and preferences.",
+  "main": "resolvers.js",
+  "scripts": {
+    "start": "npm run build-dev && node dist/main.js",
+    "build-dev": "webpack -d --mode development ./src/server.js",
+    "build-prod": "webpack -p --mode production ./src/server.js"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.7.2",
+    "apollo-datasource": "^0.6.3",
+    "apollo-server": "^2.9.12",
+    "apollo-server-koa": "^2.9.12",
+    "casual": "^1.6.2",
+    "graphql": "^14.5.8",
+    "graphql-tag": "^2.10.1",
+    "lodash": "^4.17.15",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.7.1",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "graphql-zeus": "^2.3.1",
+    "lodash-webpack-plugin": "^0.11.5",
+    "prettier": "^1.19.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

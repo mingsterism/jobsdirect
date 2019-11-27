@@ -1,0 +1,59 @@
+extend type Mutation {
+  createJob: Job
+  editJob(jobID: ID): Job
+  deleteJob(jobID: ID): Boolean
+  updateJob(input: JobInput): Job
+}
+
+extend type Query {
+  getJob(jobID: ID): Job
+}
+input JobInput {
+  jobID: ID
+  name: String
+  salary: Int
+  location: String
+  exprience: Int
+}
+
+type Job {
+  id: ID
+  applicants: [User]
+  company: Company
+  state: State
+  name: String
+  salary: Int
+  datePosted: DateTime
+  location: String
+  exprience: Int
+}
+
+enum PositionEnum {
+  ASSOCIATE
+  MANAGER
+  CONSULTANT
+  ANALYST
+  DIRECTOR
+  VP
+}
+
+enum LocationEnum {
+  MALAYSIA
+  SINGAPORE
+  THAILAND
+  HK
+  CHINA
+  PHILLIPINES
+}
+
+enum State {
+  KUALA
+  LUMPUR
+  IPOH
+  JOHOR
+  BAHRU
+  PENANG
+  NEGERI
+  SEMBILAN
+  MELAKA
+}

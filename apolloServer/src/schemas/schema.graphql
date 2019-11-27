@@ -1,0 +1,12 @@
+type Query {
+  getMatchedJobs(userID: ID): [Job]
+}
+
+type Mutation {
+  matchJob(input: MatchPayloadInput): Boolean
+}
+
+input MatchPayloadInput {
+  userID: ID
+  userLocation: String
+}

@@ -1,0 +1,30 @@
+type Company {
+  name: String
+  dateFounded: DateTime
+  employees: [Employee]
+  location: String
+  culture: CultureEnum
+  industry: IndustriesEnum
+}
+
+type Employee {
+  name: String
+  age: Int
+}
+
+enum CultureEnum {
+  CORPORATE
+  STARTUP
+  ORGANIZED
+  COMPE
+}
+
+enum IndustriesEnum {
+  FMCG
+  CONSUMER_GOODS
+  CONSULTING
+  DIGITAL_MARKETING
+  SEMICONDUCTOR
+}
+
+scalar DateTime
